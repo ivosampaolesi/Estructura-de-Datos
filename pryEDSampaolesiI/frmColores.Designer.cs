@@ -38,7 +38,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(40, 44);
+            this.lblNombre.Location = new System.Drawing.Point(42, 27);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(50, 13);
             this.lblNombre.TabIndex = 0;
@@ -46,14 +46,14 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(96, 41);
+            this.txtNombre.Location = new System.Drawing.Point(98, 24);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(165, 20);
             this.txtNombre.TabIndex = 1;
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(33, 67);
+            this.btnListar.Location = new System.Drawing.Point(35, 50);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(111, 26);
             this.btnListar.TabIndex = 2;
@@ -62,7 +62,7 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(150, 67);
+            this.btnGrabar.Location = new System.Drawing.Point(152, 50);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(111, 26);
             this.btnGrabar.TabIndex = 3;
@@ -72,9 +72,9 @@
             // lstColores
             // 
             this.lstColores.FormattingEnabled = true;
-            this.lstColores.Location = new System.Drawing.Point(18, 110);
+            this.lstColores.Location = new System.Drawing.Point(18, 97);
             this.lstColores.Name = "lstColores";
-            this.lstColores.Size = new System.Drawing.Size(274, 173);
+            this.lstColores.Size = new System.Drawing.Size(274, 186);
             this.lstColores.TabIndex = 4;
             // 
             // frmColores
