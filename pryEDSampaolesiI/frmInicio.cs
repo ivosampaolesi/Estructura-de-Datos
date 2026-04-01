@@ -38,5 +38,11 @@ namespace pryEDSampaolesiI
             frmColores x = new frmColores();
             x.ShowDialog();
         }
+
+        private void mesesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMeses x = new frmMeses();
+            x.ShowDialog(); 
+        }
     }
 }

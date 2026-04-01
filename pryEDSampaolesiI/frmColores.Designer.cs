@@ -38,33 +38,37 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(42, 27);
+            this.lblNombre.Location = new System.Drawing.Point(56, 33);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(50, 13);
+            this.lblNombre.Size = new System.Drawing.Size(62, 16);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre: ";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(98, 24);
+            this.txtNombre.Location = new System.Drawing.Point(131, 30);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(165, 20);
+            this.txtNombre.Size = new System.Drawing.Size(219, 22);
             this.txtNombre.TabIndex = 1;
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(35, 50);
+            this.btnListar.Location = new System.Drawing.Point(47, 62);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(111, 26);
+            this.btnListar.Size = new System.Drawing.Size(148, 32);
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(152, 50);
+            this.btnGrabar.Location = new System.Drawing.Point(203, 62);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(111, 26);
+            this.btnGrabar.Size = new System.Drawing.Size(148, 32);
             this.btnGrabar.TabIndex = 3;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
@@ -72,21 +76,25 @@
             // lstColores
             // 
             this.lstColores.FormattingEnabled = true;
-            this.lstColores.Location = new System.Drawing.Point(18, 97);
+            this.lstColores.ItemHeight = 16;
+            this.lstColores.Location = new System.Drawing.Point(24, 119);
+            this.lstColores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstColores.Name = "lstColores";
-            this.lstColores.Size = new System.Drawing.Size(274, 186);
+            this.lstColores.Size = new System.Drawing.Size(364, 228);
             this.lstColores.TabIndex = 4;
             // 
             // frmColores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 301);
+            this.ClientSize = new System.Drawing.Size(415, 370);
             this.Controls.Add(this.lstColores);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmColores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Colores";
