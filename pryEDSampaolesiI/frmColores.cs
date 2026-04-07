@@ -16,5 +16,14 @@ namespace pryEDSampaolesiI
         {
             InitializeComponent();
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            clsArchivoTexto x = new clsArchivoTexto();
+            x.NombreArchivo= "Colores.csv";
+            x.Grabar(txtNombre.Text);
+           
+            MessageBox.Show("Dato grabado correctamente");
+        }
     }
 }
