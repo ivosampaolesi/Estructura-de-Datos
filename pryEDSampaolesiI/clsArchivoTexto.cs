@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO; 
+using System.Windows.Forms;
 
 namespace pryEDSampaolesiI
 {
@@ -34,9 +35,20 @@ namespace pryEDSampaolesiI
         }
 
 
-        public void Recorrer()
+        public void Recorrer(ListBox lst)
         {
+            String DatoLeido; 
+            lst.Items.Clear();
+            StreamReader AD = new StreamReader(NombreArchivo);
+            DatoLeido = AD.ReadLine();
 
+            while (DatoLeido != null)
+            {
+                lst.Items.Add(DatoLeido);
+                DatoLeido = AD.ReadLine();
+
+            }
+            AD.Close();
         }   
     }
 }

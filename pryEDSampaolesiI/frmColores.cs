@@ -22,8 +22,15 @@ namespace pryEDSampaolesiI
             clsArchivoTexto x = new clsArchivoTexto();
             x.NombreArchivo= "Colores.csv";
             x.Grabar(txtNombre.Text);
-           
+            x.Recorrer(lstColores);
+
             MessageBox.Show("Dato grabado correctamente");
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+           
+           
         }
     }
 }
