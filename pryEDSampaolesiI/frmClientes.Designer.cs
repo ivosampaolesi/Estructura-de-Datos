@@ -75,7 +75,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(336, 30);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(101, 20);
             this.txtCodigo.TabIndex = 3;
@@ -83,7 +83,7 @@
             // txtDeuda
             // 
             this.txtDeuda.Location = new System.Drawing.Point(337, 85);
-            this.txtDeuda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDeuda.Margin = new System.Windows.Forms.Padding(2);
             this.txtDeuda.Name = "txtDeuda";
             this.txtDeuda.Size = new System.Drawing.Size(101, 20);
             this.txtDeuda.TabIndex = 4;
@@ -91,7 +91,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(106, 58);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(330, 20);
             this.txtNombre.TabIndex = 5;
@@ -99,7 +99,7 @@
             // btnGrabar
             // 
             this.btnGrabar.Location = new System.Drawing.Point(336, 119);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(100, 20);
             this.btnGrabar.TabIndex = 6;
@@ -115,7 +115,7 @@
             this.ColumnNombre,
             this.ColumnDeuda});
             this.dgvClientes.Location = new System.Drawing.Point(17, 155);
-            this.dgvClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(2);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
@@ -157,10 +157,11 @@
             this.Controls.Add(this.lblDeuda);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.frmClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

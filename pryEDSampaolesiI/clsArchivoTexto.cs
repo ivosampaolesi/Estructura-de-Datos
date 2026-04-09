@@ -60,6 +60,22 @@ namespace pryEDSampaolesiI
             }
             AD.Close();
         }
+
+        public void Recorrer(ComboBox cmb)
+        {
+            String DatoLeido;
+            cmb.Items.Clear();
+            StreamReader AD = new StreamReader(NombreArchivo);
+            DatoLeido = AD.ReadLine();
+
+            while (DatoLeido != null)
+            {
+                cmb.Items.Add(DatoLeido);
+                DatoLeido = AD.ReadLine();
+
+            }
+            AD.Close();
+        }
         public void Recorrer(DataGridView Grilla)
         {
                 String DatoLeido;

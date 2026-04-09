@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,13 @@ namespace pryEDSampaolesiI
             objCliente.Recorrer(dgvClientes);
             MessageBox.Show("Dato grabado"); 
 
+        }
+
+        private void frmClientes_Load(object sender, EventArgs e)
+        {
+            clsArchivoTexto x = new clsArchivoTexto();
+            x.NombreArchivo = "Clientes.csv";
+            if (File.Exists(x.NombreArchivo)) x.Recorrer(dgvClientes);
         }
     }
 }
