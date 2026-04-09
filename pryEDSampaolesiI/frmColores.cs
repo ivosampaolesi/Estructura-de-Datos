@@ -32,5 +32,10 @@ namespace pryEDSampaolesiI
            
            
         }
+
+        private void frmColores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

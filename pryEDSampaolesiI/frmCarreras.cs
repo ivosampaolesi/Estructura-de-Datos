@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryEDSampaolesiI
 {
-    public partial class frmMeses : Form
+    public partial class frmCarreras : Form
     {
-        public frmMeses()
+        public frmCarreras()
         {
             InitializeComponent();
         }
@@ -20,9 +20,9 @@ namespace pryEDSampaolesiI
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             clsArchivoTexto x = new clsArchivoTexto();
-            x.NombreArchivo = "Meses.csv";
+            x.NombreArchivo = "Carreras.csv";
             x.Grabar(txtNombre.Text);
-            x.Recorrer(lstMeses);
+            x.Recorrer(lstCarreras);
 
             MessageBox.Show("Dato grabado correctamente");
         }

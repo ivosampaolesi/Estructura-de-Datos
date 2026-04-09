@@ -45,59 +45,67 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(20, 40);
+            this.lblCodigo.Location = new System.Drawing.Point(15, 32);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(51, 16);
+            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Codigo";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(20, 75);
+            this.lblNombre.Location = new System.Drawing.Point(15, 61);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(56, 16);
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre";
             // 
             // lblDeuda
             // 
             this.lblDeuda.AutoSize = true;
-            this.lblDeuda.Location = new System.Drawing.Point(20, 108);
+            this.lblDeuda.Location = new System.Drawing.Point(15, 88);
+            this.lblDeuda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDeuda.Name = "lblDeuda";
-            this.lblDeuda.Size = new System.Drawing.Size(48, 16);
+            this.lblDeuda.Size = new System.Drawing.Size(39, 13);
             this.lblDeuda.TabIndex = 2;
             this.lblDeuda.Text = "Deuda";
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(448, 37);
+            this.txtCodigo.Location = new System.Drawing.Point(336, 30);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(133, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(101, 20);
             this.txtCodigo.TabIndex = 3;
             // 
             // txtDeuda
             // 
-            this.txtDeuda.Location = new System.Drawing.Point(449, 105);
+            this.txtDeuda.Location = new System.Drawing.Point(337, 85);
+            this.txtDeuda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDeuda.Name = "txtDeuda";
-            this.txtDeuda.Size = new System.Drawing.Size(133, 22);
+            this.txtDeuda.Size = new System.Drawing.Size(101, 20);
             this.txtDeuda.TabIndex = 4;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(142, 72);
+            this.txtNombre.Location = new System.Drawing.Point(106, 58);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(439, 22);
+            this.txtNombre.Size = new System.Drawing.Size(330, 20);
             this.txtNombre.TabIndex = 5;
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(448, 147);
+            this.btnGrabar.Location = new System.Drawing.Point(336, 119);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(133, 25);
+            this.btnGrabar.Size = new System.Drawing.Size(100, 20);
             this.btnGrabar.TabIndex = 6;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // dgvClientes
             // 
@@ -106,11 +114,12 @@
             this.ColumnCodigo,
             this.ColumnNombre,
             this.ColumnDeuda});
-            this.dgvClientes.Location = new System.Drawing.Point(23, 191);
+            this.dgvClientes.Location = new System.Drawing.Point(17, 155);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
-            this.dgvClientes.Size = new System.Drawing.Size(559, 231);
+            this.dgvClientes.Size = new System.Drawing.Size(430, 188);
             this.dgvClientes.TabIndex = 7;
             // 
             // ColumnCodigo
@@ -125,7 +134,7 @@
             this.ColumnNombre.HeaderText = "Nombre";
             this.ColumnNombre.MinimumWidth = 6;
             this.ColumnNombre.Name = "ColumnNombre";
-            this.ColumnNombre.Width = 300;
+            this.ColumnNombre.Width = 225;
             // 
             // ColumnDeuda
             // 
@@ -136,9 +145,10 @@
             // 
             // frmClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AcceptButton = this.btnGrabar;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 450);
+            this.ClientSize = new System.Drawing.Size(460, 366);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.txtNombre);
@@ -147,6 +157,7 @@
             this.Controls.Add(this.lblDeuda);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";

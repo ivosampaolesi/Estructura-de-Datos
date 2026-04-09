@@ -44,5 +44,17 @@ namespace pryEDSampaolesiI
             frmMeses x = new frmMeses();
             x.ShowDialog(); 
         }
+
+        private void carrerasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCarreras x = new frmCarreras();
+            x.ShowDialog();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientes x = new frmClientes();
+            x.ShowDialog();
+        }
     }
 }

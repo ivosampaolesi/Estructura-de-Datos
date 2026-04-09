@@ -33,6 +33,16 @@ namespace pryEDSampaolesiI
             AD.WriteLine(Nombre);
             AD.Close();
         }
+        public void Grabar(String Dato1, String Dato2, String Dato3)
+        {
+            StreamWriter AD = new StreamWriter(NombreArchivo, true);
+            AD.Write(Dato1);
+            AD.Write(";");
+            AD.Write(Dato2);
+            AD.Write(";");
+            AD.WriteLine(Dato3);
+            AD.Close();
+        }
 
 
         public void Recorrer(ListBox lst)
