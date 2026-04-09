@@ -22,7 +22,9 @@ namespace pryEDSampaolesiI
             clsArchivoTexto objCliente = new clsArchivoTexto();
             objCliente.NombreArchivo = "Clientes.csv";
             objCliente.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
+            objCliente.Recorrer(dgvClientes);
             MessageBox.Show("Dato grabado"); 
+
         }
     }
 }

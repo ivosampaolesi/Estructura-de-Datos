@@ -47,7 +47,7 @@ namespace pryEDSampaolesiI
 
         public void Recorrer(ListBox lst)
         {
-            String DatoLeido; 
+            String DatoLeido;
             lst.Items.Clear();
             StreamReader AD = new StreamReader(NombreArchivo);
             DatoLeido = AD.ReadLine();
@@ -59,6 +59,21 @@ namespace pryEDSampaolesiI
 
             }
             AD.Close();
+        }
+        public void Recorrer(DataGridView Grilla)
+        {
+                String DatoLeido;
+                Grilla.Rows.Clear();
+                StreamReader AD = new StreamReader(NombreArchivo);
+                DatoLeido = AD.ReadLine();
+
+                while (DatoLeido != null)
+                {
+                    Grilla.Rows.Add(DatoLeido.Split(';'));
+                    DatoLeido = AD.ReadLine();
+
+                }
+           AD.Close();
         }   
     }
 }
