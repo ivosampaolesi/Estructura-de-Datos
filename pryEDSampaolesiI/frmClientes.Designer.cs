@@ -157,6 +157,7 @@
             this.Controls.Add(this.lblDeuda);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

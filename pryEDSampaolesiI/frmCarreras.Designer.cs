@@ -78,6 +78,7 @@
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmCarreras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCarreras";
