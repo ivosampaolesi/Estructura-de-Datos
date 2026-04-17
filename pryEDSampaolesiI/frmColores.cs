@@ -25,6 +25,8 @@ namespace pryEDSampaolesiI
             x.Recorrer(lstColores);
 
             MessageBox.Show("Dato grabado correctamente");
+            txtNombre.Clear();
+            txtNombre.Focus(); 
         }
 
         private void btnListar_Click(object sender, EventArgs e)
@@ -36,6 +38,18 @@ namespace pryEDSampaolesiI
         private void frmColores_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "")
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
         }
     }
 }

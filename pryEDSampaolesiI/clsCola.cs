@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,7 +13,7 @@ namespace pryEDSampaolesiI
     {
         private clsNodo pri;
         private clsNodo ult;
-        
+
         public clsNodo Primero
         {
             get { return pri; }
@@ -21,7 +23,7 @@ namespace pryEDSampaolesiI
         {
             get { return ult; }
             set { ult = value; }
-        }   
+        }
 
         public void Agregar(clsNodo Nuevo)
         {
@@ -59,11 +61,50 @@ namespace pryEDSampaolesiI
                 Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
                 aux = aux.Siguiente;
             }
+        }
+
+        public void Recorrer(ListBox Lista)
+        {
+            clsNodo aux = Primero;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.Codigo);
+                aux = aux.Siguiente;
+            }
+        }
+        public void Recorrer(ComboBox Combo)
+        {
+            clsNodo aux = Primero;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Codigo);
+                aux = aux.Siguiente;
+            }
+        }
+
+        public void Recorrer()
+        { 
+            clsNodo aux = Primero;
+            StreamWriter AD = new StreamWriter("Cola.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            while (aux != null)
+            {
+                AD.WriteLine(aux.Codigo);
+                AD.Write(";");
+                AD.WriteLine(aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(aux.Tramite);
+                aux = aux.Siguiente;
+            }
+            AD.Close();
 
 
         }
 
 
-
+        
     }
-}
+}     

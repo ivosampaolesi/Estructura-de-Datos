@@ -25,6 +25,20 @@ namespace pryEDSampaolesiI
             x.Recorrer(lstMeses);
 
             MessageBox.Show("Dato grabado correctamente");
+            txtNombre.Clear();
+            txtNombre.Focus();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "")
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
         }
     }
 }

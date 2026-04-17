@@ -36,6 +36,48 @@ namespace pryEDSampaolesiI
             objAlumnos.Grabar(txtCodigo.Text, txtNombre.Text, cmbCarrera.Text);
             objAlumnos.Recorrer(dgvAlumnos);
             MessageBox.Show("Dato grabado");
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            cmbCarrera.SelectedIndex = -1;
+            txtCodigo.Focus();
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.TextLength != 0 && txtNombre.Text != "" && cmbCarrera.SelectedIndex != -1)
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
+        }
+
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.TextLength != 0 && txtNombre.Text != "" && cmbCarrera.SelectedIndex != -1)
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
+
+        }
+
+        private void cmbCarrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.TextLength != 0 && txtNombre.Text != "" && cmbCarrera.SelectedIndex != -1)
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
         }
     }
 }

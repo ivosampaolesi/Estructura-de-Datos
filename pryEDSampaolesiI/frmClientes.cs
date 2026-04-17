@@ -25,7 +25,10 @@ namespace pryEDSampaolesiI
             objCliente.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
             objCliente.Recorrer(dgvClientes);
             MessageBox.Show("Dato grabado"); 
-
+            txtCodigo.Clear();
+            txtCodigo.Focus();
+            txtDeuda.Clear();
+            txtNombre.Clear();
         }
 
         private void frmClientes_Load(object sender, EventArgs e)
@@ -33,6 +36,42 @@ namespace pryEDSampaolesiI
             clsArchivoTexto x = new clsArchivoTexto();
             x.NombreArchivo = "Clientes.csv";
             if (File.Exists(x.NombreArchivo)) x.Recorrer(dgvClientes);
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtDeuda.Text != "")
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtDeuda.Text != "")
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
+        }
+
+        private void txtDeuda_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtDeuda.Text != "")
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
         }
     }
 }
