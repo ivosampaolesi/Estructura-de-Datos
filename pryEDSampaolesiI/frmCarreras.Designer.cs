@@ -39,7 +39,7 @@
             this.lstCarreras.FormattingEnabled = true;
             this.lstCarreras.ItemHeight = 16;
             this.lstCarreras.Location = new System.Drawing.Point(24, 114);
-            this.lstCarreras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstCarreras.Margin = new System.Windows.Forms.Padding(4);
             this.lstCarreras.Name = "lstCarreras";
             this.lstCarreras.Size = new System.Drawing.Size(364, 228);
             this.lstCarreras.TabIndex = 13;
@@ -48,7 +48,7 @@
             // 
             this.btnGrabar.Enabled = false;
             this.btnGrabar.Location = new System.Drawing.Point(203, 58);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(148, 32);
             this.btnGrabar.TabIndex = 12;
@@ -59,7 +59,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(131, 26);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(219, 22);
             this.txtNombre.TabIndex = 11;
@@ -86,7 +86,8 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizeBox = false;
             this.Name = "frmCarreras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCarreras";

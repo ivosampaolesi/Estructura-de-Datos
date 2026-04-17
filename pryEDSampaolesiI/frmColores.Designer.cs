@@ -47,7 +47,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(131, 30);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(219, 22);
             this.txtNombre.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             this.btnGrabar.Enabled = false;
             this.btnGrabar.Location = new System.Drawing.Point(203, 62);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(148, 32);
             this.btnGrabar.TabIndex = 3;
@@ -70,7 +70,7 @@
             this.lstColores.FormattingEnabled = true;
             this.lstColores.ItemHeight = 16;
             this.lstColores.Location = new System.Drawing.Point(24, 119);
-            this.lstColores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstColores.Margin = new System.Windows.Forms.Padding(4);
             this.lstColores.Name = "lstColores";
             this.lstColores.Size = new System.Drawing.Size(364, 228);
             this.lstColores.TabIndex = 4;
@@ -86,7 +86,8 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmColores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Colores";
