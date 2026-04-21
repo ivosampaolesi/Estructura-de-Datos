@@ -83,6 +83,26 @@ namespace pryEDSampaolesiI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lista_simple {
+            get {
+                object obj = ResourceManager.GetObject("lista-simple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ListaDoble {
+            get {
+                object obj = ResourceManager.GetObject("ListaDoble", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_ies {
             get {
                 object obj = ResourceManager.GetObject("Logo ies", resourceCulture);
