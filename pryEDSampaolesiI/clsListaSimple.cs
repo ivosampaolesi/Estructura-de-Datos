@@ -1,44 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace pryEDSampaolesiI
 {
-    internal class clsPila
+    internal class clsListaSimple
     {
-
         private clsNodo pri;
         public clsNodo Primero
         {
             get { return pri; }
             set { pri = value; }
         }
-
-        public void Agregar(clsNodo Nuevo)
+        public void Agregar(clsNodo nuevo)
         {
             if (Primero == null)
             {
-                Primero = Nuevo;
-
+                Primero = nuevo;
             }
             else
             {
-                Nuevo.Siguiente = Primero;
-                Primero = Nuevo;
-
+                clsNodo aux = Primero;
+                clsNodo ant = Primero;
+                while (nuevo.Codigo > aux.Codigo)
+                {
+                    ant = aux;
+                    aux = aux.Siguiente;
+                    if (aux == null)
+                    {
+                        break;
+                    }
+                }
+                nuevo.Siguiente = aux;
+                ant.Siguiente = nuevo;
             }
-        }
 
-        public void Eliminar()
-        {
-            if (Primero != null)
-            {
-                Primero = Primero.Siguiente;
-            }
+
         }
 
         public void Recorrer(DataGridView Grilla)
@@ -51,6 +52,7 @@ namespace pryEDSampaolesiI
                 aux = aux.Siguiente;
             }
         }
+
         public void Recorrer(ListBox Lista)
         {
             clsNodo aux = Primero;
@@ -71,10 +73,11 @@ namespace pryEDSampaolesiI
                 aux = aux.Siguiente;
             }
         }
-        public void Recorrer(String ArchivoPila)
+
+        public void Recorrer()
         {
             clsNodo aux = Primero;
-            StreamWriter AD = new StreamWriter(ArchivoPila, false, Encoding.UTF8);
+            StreamWriter AD = new StreamWriter("ListaSimple.csv", false, Encoding.UTF8);
             AD.WriteLine("Lista de espera\n");
             AD.WriteLine("Codigo;Nombre;Tramite");
             while (aux != null)
@@ -87,9 +90,29 @@ namespace pryEDSampaolesiI
                 aux = aux.Siguiente;
             }
             AD.Close();
+
+
         }
-            
-            
+
+        public void Eliminar(Int32 Codigo)
+        {
+            if (Primero.Codigo == Codigo)
+            {
+                Primero = Primero.Siguiente;
+            }
+            else
+            {
+                clsNodo aux1 = Primero;
+                clsNodo aux2 = Primero;
+                while (aux1.Codigo != Codigo)
+                {
+                    aux1 = Primero;
+                    aux2 = Primero;
+
+                }
+                aux2.Siguiente = aux1.Siguiente;
+            }
+
+        }
     }
-  
-} 
+}
