@@ -10,7 +10,6 @@ namespace pryEDSampaolesiI
 {
     internal class clsPila
     {
-
         private clsNodo pri;
         public clsNodo Primero
         {
@@ -18,78 +17,81 @@ namespace pryEDSampaolesiI
             set { pri = value; }
         }
 
-        public void Agregar(clsNodo Nuevo)
+        public void Agregar(clsNodo nuevo)
         {
-            if (Primero == null)
+            if (pri == null)
             {
-                Primero = Nuevo;
-
+                pri = nuevo;
             }
             else
             {
-                Nuevo.Siguiente = Primero;
-                Primero = Nuevo;
-
+                nuevo.Siguiente = pri;
+                pri = nuevo;
             }
         }
 
         public void Eliminar()
         {
-            if (Primero != null)
+            if (pri != null)
             {
-                Primero = Primero.Siguiente;
+                pri = pri.Siguiente;
             }
         }
 
         public void Recorrer(DataGridView Grilla)
         {
-            clsNodo aux = Primero;
+            clsNodo aux = pri;
             Grilla.Rows.Clear();
+
             while (aux != null)
             {
                 Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
                 aux = aux.Siguiente;
             }
         }
+
         public void Recorrer(ListBox Lista)
         {
-            clsNodo aux = Primero;
+            clsNodo aux = pri;
             Lista.Items.Clear();
+
             while (aux != null)
             {
-                Lista.Items.Add(aux.Codigo);
+                Lista.Items.Add(aux.Codigo + "-" + aux.Nombre + "-" + aux.Tramite);
                 aux = aux.Siguiente;
             }
         }
+
         public void Recorrer(ComboBox Combo)
         {
-            clsNodo aux = Primero;
+            clsNodo aux = pri;
             Combo.Items.Clear();
+
             while (aux != null)
             {
-                Combo.Items.Add(aux.Codigo);
+                Combo.Items.Add(aux.Codigo + "-" + aux.Nombre + "-" + aux.Tramite);
                 aux = aux.Siguiente;
             }
         }
-        public void Recorrer(String ArchivoPila)
+
+        public void Recorrer(String NombreArchivo)
         {
-            clsNodo aux = Primero;
-            StreamWriter AD = new StreamWriter(ArchivoPila, false, Encoding.UTF8);
-            AD.WriteLine("Lista de espera\n");
+            clsNodo aux = pri;
+            StreamWriter AD = new StreamWriter(NombreArchivo, false, Encoding.UTF8);
+            AD.WriteLine("Lista de personas");
             AD.WriteLine("Codigo;Nombre;Tramite");
+
             while (aux != null)
             {
-                AD.WriteLine(aux.Codigo);
+                AD.Write(aux.Codigo);
                 AD.Write(";");
-                AD.WriteLine(aux.Nombre);
+                AD.Write(aux.Nombre);
                 AD.Write(";");
                 AD.WriteLine(aux.Tramite);
                 aux = aux.Siguiente;
             }
             AD.Close();
+
         }
-            
-            
-    }
-  
-} 
+    }   
+}       
