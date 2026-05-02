@@ -63,7 +63,7 @@ namespace pryEDSampaolesiI
             clsArchivoTexto x = new clsArchivoTexto();
             x.NombreArchivo = "Pila.csv";
             if (File.Exists(x.NombreArchivo)) x.Recorrer(dgvPila);
-            btnAgregar.Enabled = true;
+          
         }
 
 

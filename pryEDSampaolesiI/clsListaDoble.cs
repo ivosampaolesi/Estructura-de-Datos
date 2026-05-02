@@ -1,59 +1,69 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace pryEDSampaolesiI
 {
-    internal class clsListaSimple
+    internal class clsListaDoble
     {
         private clsNodo pri;
-        public clsNodo Primero
+        private clsNodo ult;
+        private clsNodo Primero
         {
             get { return pri; }
             set { pri = value; }
         }
-        public void Agregar(clsNodo Nuevo)
+        private clsNodo Ultimo
+        {
+            get { return ult; }
+            set { ult = value; }
+        }
+        public void Agregar(clsNodo Nvo)
         {
             if (Primero == null)
             {
-                Primero = Nuevo;
+                Primero = Nvo;
+                Ultimo = Nvo;
             }
             else
             {
-                if (Nuevo.Codigo <= Primero.Codigo)
+                if (Nvo.Codigo < Primero.Codigo)
                 {
-                    Nuevo.Siguiente = Primero;
-                    Primero = Nuevo;
+                    Nvo.Siguiente = Primero;
+                    Primero.Anterior = Nvo;
+                    Primero = Nvo;
                 }
                 else
                 {
-                    if (Nuevo.Codigo <= Primero.Codigo)
+                    if (Nvo.Codigo > Ultimo.Codigo)
                     {
-                        Nuevo.Siguiente = Primero;
-                        Primero = Nuevo;
+                        Ultimo.Siguiente = Nvo;
+                        Nvo.Anterior = Ultimo;
+                        Ultimo = Nvo;
                     }
                     else
                     {
-                        clsNodo aux = Primero;
-                        clsNodo ant = Primero;
-                        while (Nuevo.Codigo > aux.Codigo)
+                        clsNodo Aux = Primero;
+                        clsNodo Ant = Primero;
+                        while (Aux.Codigo < Nvo.Codigo)
                         {
-                            ant = aux;
-                            aux = aux.Siguiente;
-                            if (aux == null)
+                            if (Nvo.Codigo < Aux.Codigo)
                             {
-                                break;
+                                Ant = Aux;
+                                Aux = Aux.Siguiente;
                             }
                         }
-                        ant.Siguiente = Nuevo;
-                        Nuevo.Siguiente = aux;
+                        Ant.Siguiente = Nvo;
+                        Nvo.Siguiente = Aux;
+                        Aux.Anterior = Nvo;
+                        Nvo.Anterior = Aux;
                     }
                 }
-            }    
+            }
         }
 
         public void Recorrer(DataGridView Grilla)
@@ -77,56 +87,35 @@ namespace pryEDSampaolesiI
                 aux = aux.Siguiente;
             }
         }
+
         public void Recorrer(ComboBox Combo)
         {
             clsNodo aux = Primero;
             Combo.Items.Clear();
             while (aux != null)
             {
-                Combo.Items.Add(aux.Codigo);
+                Combo.Items.Add(aux.Nombre);
                 aux = aux.Siguiente;
             }
         }
 
-        public void Recorrer()
+        public void Recorrer(String NombreArchivo)
         {
             clsNodo aux = Primero;
-            StreamWriter AD = new StreamWriter("ListaSimple.csv", false, Encoding.UTF8);
-            AD.WriteLine("Lista de espera\n");
-            AD.WriteLine("Codigo;Nombre;Tramite");
+            StreamWriter AD = new StreamWriter("ListaDoble.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de Personas Ordenada por Codigo\n");
+            AD.WriteLine("Código;Nombre;Trámite");
             while (aux != null)
             {
-                AD.WriteLine(aux.Codigo);
+                AD.Write(aux.Codigo);
                 AD.Write(";");
-                AD.WriteLine(aux.Nombre);
+                AD.Write(aux.Nombre);
                 AD.Write(";");
                 AD.WriteLine(aux.Tramite);
                 aux = aux.Siguiente;
             }
             AD.Close();
-
-
-        }
-
-        public void Eliminar(Int32 Codigo)
-        {
-            if (Primero.Codigo == Codigo)
-            {
-                Primero = Primero.Siguiente;
-            }
-            else
-            {
-                clsNodo aux1 = Primero;
-                clsNodo aux2 = Primero;
-                while (aux1.Codigo != Codigo)
-                {
-                    aux2 = aux1;
-                    aux1 = aux1.Siguiente;
-
-                }
-                aux2.Siguiente = aux1.Siguiente;
-            }
-
         }
     }
 }
+

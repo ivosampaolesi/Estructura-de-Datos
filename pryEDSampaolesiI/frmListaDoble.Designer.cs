@@ -38,7 +38,7 @@
             this.lblCodigoN = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbLista = new System.Windows.Forms.ComboBox();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -48,8 +48,8 @@
             this.columnTramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstListaDoble = new System.Windows.Forms.ListBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.rdbAscendente = new System.Windows.Forms.RadioButton();
             this.rdbDescendente = new System.Windows.Forms.RadioButton();
+            this.rdbAscendente = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -61,9 +61,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::pryEDSampaolesiI.Properties.Resources.ListaDoble;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(194, 173);
+            this.pictureBox1.Size = new System.Drawing.Size(259, 213);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -77,95 +78,109 @@
             this.groupBox3.Controls.Add(this.txtNombre);
             this.groupBox3.Controls.Add(this.lblCodigoN);
             this.groupBox3.Controls.Add(this.txtCodigo);
-            this.groupBox3.Location = new System.Drawing.Point(223, 8);
+            this.groupBox3.Location = new System.Drawing.Point(297, 10);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(176, 173);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(235, 213);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Nuevo Elemento";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(24, 124);
+            this.btnAgregar.Location = new System.Drawing.Point(32, 153);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(130, 32);
+            this.btnAgregar.Size = new System.Drawing.Size(173, 39);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblTramiteN
             // 
             this.lblTramiteN.AutoSize = true;
-            this.lblTramiteN.Location = new System.Drawing.Point(6, 101);
+            this.lblTramiteN.Location = new System.Drawing.Point(8, 124);
+            this.lblTramiteN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTramiteN.Name = "lblTramiteN";
-            this.lblTramiteN.Size = new System.Drawing.Size(45, 13);
+            this.lblTramiteN.Size = new System.Drawing.Size(56, 16);
             this.lblTramiteN.TabIndex = 5;
             this.lblTramiteN.Text = "Tramite:";
             // 
             // txtTramite
             // 
-            this.txtTramite.Location = new System.Drawing.Point(70, 98);
+            this.txtTramite.Location = new System.Drawing.Point(93, 121);
+            this.txtTramite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTramite.Name = "txtTramite";
-            this.txtTramite.Size = new System.Drawing.Size(100, 20);
+            this.txtTramite.Size = new System.Drawing.Size(132, 22);
             this.txtTramite.TabIndex = 4;
             // 
             // lblNombreN
             // 
             this.lblNombreN.AutoSize = true;
-            this.lblNombreN.Location = new System.Drawing.Point(6, 68);
+            this.lblNombreN.Location = new System.Drawing.Point(8, 84);
+            this.lblNombreN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreN.Name = "lblNombreN";
-            this.lblNombreN.Size = new System.Drawing.Size(47, 13);
+            this.lblNombreN.Size = new System.Drawing.Size(59, 16);
             this.lblNombreN.TabIndex = 3;
             this.lblNombreN.Text = "Nombre:";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(70, 65);
+            this.txtNombre.Location = new System.Drawing.Point(93, 80);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(132, 22);
             this.txtNombre.TabIndex = 2;
             // 
             // lblCodigoN
             // 
             this.lblCodigoN.AutoSize = true;
-            this.lblCodigoN.Location = new System.Drawing.Point(6, 36);
+            this.lblCodigoN.Location = new System.Drawing.Point(8, 44);
+            this.lblCodigoN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigoN.Name = "lblCodigoN";
-            this.lblCodigoN.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigoN.Size = new System.Drawing.Size(54, 16);
             this.lblCodigoN.TabIndex = 1;
             this.lblCodigoN.Text = "Codigo:";
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(88, 33);
+            this.txtCodigo.Location = new System.Drawing.Point(117, 41);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(82, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(108, 22);
             this.txtCodigo.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cmbLista);
             this.groupBox2.Controls.Add(this.btnBorrar);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(405, 8);
+            this.groupBox2.Location = new System.Drawing.Point(540, 10);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(176, 94);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(235, 116);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Eliminar Elemento";
             // 
-            // comboBox1
+            // cmbLista
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(72, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(82, 21);
-            this.comboBox1.TabIndex = 8;
+            this.cmbLista.FormattingEnabled = true;
+            this.cmbLista.Location = new System.Drawing.Point(96, 28);
+            this.cmbLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLista.Name = "cmbLista";
+            this.cmbLista.Size = new System.Drawing.Size(108, 24);
+            this.cmbLista.TabIndex = 8;
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(24, 49);
+            this.btnBorrar.Location = new System.Drawing.Point(32, 60);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(130, 32);
+            this.btnBorrar.Size = new System.Drawing.Size(173, 39);
             this.btnBorrar.TabIndex = 7;
             this.btnBorrar.Text = "Eliminar";
             this.btnBorrar.UseVisualStyleBackColor = true;
@@ -173,9 +188,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 26);
+            this.label3.Location = new System.Drawing.Point(15, 32);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(54, 16);
             this.label3.TabIndex = 6;
             this.label3.Text = "Codigo:";
             // 
@@ -183,9 +199,11 @@
             // 
             this.groupBox1.Controls.Add(this.dgvListaDoble);
             this.groupBox1.Controls.Add(this.lstListaDoble);
-            this.groupBox1.Location = new System.Drawing.Point(13, 187);
+            this.groupBox1.Location = new System.Drawing.Point(17, 230);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(568, 206);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(757, 254);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado en Lista y en Grilla";
@@ -197,10 +215,11 @@
             this.columCodigo,
             this.columnNombre,
             this.columnTramite});
-            this.dgvListaDoble.Location = new System.Drawing.Point(200, 19);
+            this.dgvListaDoble.Location = new System.Drawing.Point(267, 23);
+            this.dgvListaDoble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvListaDoble.Name = "dgvListaDoble";
             this.dgvListaDoble.RowHeadersWidth = 51;
-            this.dgvListaDoble.Size = new System.Drawing.Size(361, 172);
+            this.dgvListaDoble.Size = new System.Drawing.Size(481, 212);
             this.dgvListaDoble.TabIndex = 1;
             // 
             // columCodigo
@@ -227,56 +246,63 @@
             // lstListaDoble
             // 
             this.lstListaDoble.FormattingEnabled = true;
-            this.lstListaDoble.Location = new System.Drawing.Point(6, 19);
+            this.lstListaDoble.ItemHeight = 16;
+            this.lstListaDoble.Location = new System.Drawing.Point(8, 23);
+            this.lstListaDoble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstListaDoble.Name = "lstListaDoble";
-            this.lstListaDoble.Size = new System.Drawing.Size(185, 173);
+            this.lstListaDoble.Size = new System.Drawing.Size(245, 212);
             this.lstListaDoble.TabIndex = 0;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.rdbDescendente);
             this.groupBox4.Controls.Add(this.rdbAscendente);
-            this.groupBox4.Location = new System.Drawing.Point(406, 106);
+            this.groupBox4.Location = new System.Drawing.Point(541, 130);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(176, 75);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(235, 92);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Listar Datos";
             // 
-            // rdbAscendente
-            // 
-            this.rdbAscendente.AutoSize = true;
-            this.rdbAscendente.Location = new System.Drawing.Point(13, 19);
-            this.rdbAscendente.Name = "rdbAscendente";
-            this.rdbAscendente.Size = new System.Drawing.Size(82, 17);
-            this.rdbAscendente.TabIndex = 0;
-            this.rdbAscendente.TabStop = true;
-            this.rdbAscendente.Text = "Ascendente";
-            this.rdbAscendente.UseVisualStyleBackColor = true;
-            // 
             // rdbDescendente
             // 
             this.rdbDescendente.AutoSize = true;
-            this.rdbDescendente.Location = new System.Drawing.Point(13, 42);
+            this.rdbDescendente.Location = new System.Drawing.Point(17, 52);
+            this.rdbDescendente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbDescendente.Name = "rdbDescendente";
-            this.rdbDescendente.Size = new System.Drawing.Size(89, 17);
+            this.rdbDescendente.Size = new System.Drawing.Size(109, 20);
             this.rdbDescendente.TabIndex = 1;
             this.rdbDescendente.TabStop = true;
             this.rdbDescendente.Text = "Descendente";
             this.rdbDescendente.UseVisualStyleBackColor = true;
             // 
+            // rdbAscendente
+            // 
+            this.rdbAscendente.AutoSize = true;
+            this.rdbAscendente.Location = new System.Drawing.Point(17, 23);
+            this.rdbAscendente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbAscendente.Name = "rdbAscendente";
+            this.rdbAscendente.Size = new System.Drawing.Size(100, 20);
+            this.rdbAscendente.TabIndex = 0;
+            this.rdbAscendente.TabStop = true;
+            this.rdbAscendente.Text = "Ascendente";
+            this.rdbAscendente.UseVisualStyleBackColor = true;
+            // 
             // frmListaDoble
             // 
             this.AcceptButton = this.btnAgregar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 400);
+            this.ClientSize = new System.Drawing.Size(792, 492);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmListaDoble";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -306,7 +332,7 @@
         private System.Windows.Forms.Label lblCodigoN;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbLista;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
