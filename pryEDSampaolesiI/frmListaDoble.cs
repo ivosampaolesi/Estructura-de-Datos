@@ -36,5 +36,4 @@ namespace pryEDSampaolesiI
             txtTramite.Text = "";
         }
     }
-    }
 }
