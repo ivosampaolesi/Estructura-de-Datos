@@ -65,57 +65,46 @@ namespace pryEDSampaolesiI
                 }
             }
         }
-
-        public void Recorrer(DataGridView Grilla)
+        public void Eliminar(Int32 Codigo)
         {
-            clsNodo aux = Primero;
-            Grilla.Rows.Clear();
-            while (aux != null)
+            if (Primero.Codigo == Codigo && Ultimo == Primero)
             {
-                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
-                aux = aux.Siguiente;
+                Primero = null;
+                Ultimo = null;
+            }
+            else
+            {
+                if (Primero.Codigo == Codigo)
+                {
+                    Primero = Primero.Siguiente;
+                    Primero.Anterior = null;
+                }
+                else
+                {
+                    if (Ultimo.Codigo == Codigo)
+                    {
+                        Ultimo = Ultimo.Anterior;
+                        Ultimo.Siguiente = null;
+                    }
+                    else
+                    {
+                        clsNodo aux = Primero;
+                        clsNodo ant = Primero;
+                        while (aux.Codigo < Codigo)
+                        {
+                            ant = aux;
+                            aux = aux.Siguiente;
+                        }
+                        aux = aux.Siguiente;
+                        aux.Anterior = ant;
+                        ant.Siguiente = aux;
+                    }
+                }
             }
         }
 
-        public void Recorrer(ListBox Lista)
-        {
-            clsNodo aux = Primero;
-            Lista.Items.Clear();
-            while (aux != null)
-            {
-                Lista.Items.Add(aux.Codigo);
-                aux = aux.Siguiente;
-            }
-        }
 
-        public void Recorrer(ComboBox Combo)
-        {
-            clsNodo aux = Primero;
-            Combo.Items.Clear();
-            while (aux != null)
-            {
-                Combo.Items.Add(aux.Nombre);
-                aux = aux.Siguiente;
-            }
-        }
 
-        public void Recorrer(String NombreArchivo)
-        {
-            clsNodo aux = Primero;
-            StreamWriter AD = new StreamWriter("ListaDoble.csv", false, Encoding.UTF8);
-            AD.WriteLine("Lista de Personas Ordenada por Codigo\n");
-            AD.WriteLine("Código;Nombre;Trámite");
-            while (aux != null)
-            {
-                AD.Write(aux.Codigo);
-                AD.Write(";");
-                AD.Write(aux.Nombre);
-                AD.Write(";");
-                AD.WriteLine(aux.Tramite);
-                aux = aux.Siguiente;
-            }
-            AD.Close();
-        }
     }
 }
 
