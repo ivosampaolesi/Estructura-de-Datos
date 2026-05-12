@@ -103,8 +103,26 @@ namespace pryEDSampaolesiI
             }
         }
 
-
-
+        public void RecorrerDes(DataGridView Grilla)
+        {
+            clsNodo aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux =aux.Anterior;
+            }
+        }
+        public void Recorrer(DataGridView Grilla)
+        {
+            clsNodo aux = Primero;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Siguiente;
+            }
+        }
     }
 }
 
