@@ -12,12 +12,12 @@ namespace pryEDSampaolesiI
     {
         private clsNodo pri;
         private clsNodo ult;
-        private clsNodo Primero
+        public clsNodo Primero
         {
             get { return pri; }
             set { pri = value; }
         }
-        private clsNodo Ultimo
+        public clsNodo Ultimo
         {
             get { return ult; }
             set { ult = value; }
@@ -103,6 +103,57 @@ namespace pryEDSampaolesiI
             }
         }
 
+        public void Recorrer(DataGridView Grilla)
+        {
+            clsNodo Aux = Primero;
+            Grilla.Rows.Clear();
+            while (Aux != null)
+            {
+                Grilla.Rows.Add(Aux.Codigo, Aux.Nombre, Aux.Tramite);
+                Aux = Aux.Siguiente;
+            }
+        }
+
+        public void Recorrer(ListBox Lista)
+        {
+            clsNodo Aux = Primero;
+            Lista.Items.Clear();
+            while (Aux != null)
+            {
+                Lista.Items.Add($"Código: {Aux.Codigo}, Nombre: {Aux.Nombre}, Trámite: {Aux.Tramite}");
+                Aux = Aux.Siguiente;
+            }
+        }
+
+        public void Recorrer(ComboBox Combo)
+        {
+            clsNodo Aux = Primero;
+            Combo.Items.Clear();
+            while (Aux != null)
+            {
+                Combo.Items.Add($"Código: {Aux.Codigo}, Nombre: {Aux.Nombre}, Trámite: {Aux.Tramite}");
+                Aux = Aux.Siguiente;
+            }
+        }
+
+        public void Recorrer()
+        {
+            clsNodo Aux = Primero;
+            StreamWriter AD = new StreamWriter("ListaDoble.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            while (Aux != null)
+            {
+                AD.Write(Aux.Codigo);
+                AD.Write(";");
+                AD.Write(Aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(Aux.Tramite);
+                Aux = Aux.Siguiente;
+            }
+            AD.Close();
+        }
+
         public void RecorrerDes(DataGridView Grilla)
         {
             clsNodo aux = Ultimo;
@@ -110,19 +161,49 @@ namespace pryEDSampaolesiI
             while (aux != null)
             {
                 Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
-                aux =aux.Anterior;
+                aux = aux.Anterior;
             }
         }
-        public void Recorrer(DataGridView Grilla)
+
+        public void RecorrerDes(ListBox Lista)
         {
-            clsNodo aux = Primero;
-            Grilla.Rows.Clear();
+            clsNodo aux = Ultimo;
+            Lista.Items.Clear();
             while (aux != null)
             {
-                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
-                aux = aux.Siguiente;
+                Lista.Items.Add($"Código: {aux.Codigo}, Nombre: {aux.Nombre}, Trámite: {aux.Tramite}");
+                aux = aux.Anterior;
             }
         }
-    }
-}
+
+        public void RecorrerDes(ComboBox Combo)
+        {
+            clsNodo aux = Ultimo;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add($"Código: {aux.Codigo}, Nombre: {aux.Nombre}, Trámite: {aux.Tramite}");
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerDes()
+        {
+            clsNodo aux = Ultimo;
+            StreamWriter AD = new StreamWriter("ListaDoble.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            while (aux != null)
+            {
+                AD.Write(aux.Codigo);
+                AD.Write(";");
+                AD.Write(aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(aux.Tramite);
+                aux = aux.Anterior;
+            }
+            AD.Close();
+
+        }
+}   }
 

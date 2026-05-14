@@ -17,12 +17,12 @@ namespace pryEDSampaolesiI
         {
             InitializeComponent();
         }
-        clsListaSimple Lista = new clsListaSimple(); 
+        clsListaSimple Lista = new clsListaSimple();
 
         private void frmListaSimple_Load(object sender, EventArgs e)
         {
 
-            
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -52,7 +52,48 @@ namespace pryEDSampaolesiI
                 Lista.Recorrer(cmbCodigo);
                 Lista.Recorrer();
             }
+            btnBorrar.Enabled = false;
+        }
 
+        private void cmbCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnBorrar.Enabled = true;
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
         }
     }
 }

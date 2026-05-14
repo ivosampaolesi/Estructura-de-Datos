@@ -32,6 +32,17 @@ namespace pryEDSampaolesiI
             txtNombre.Clear();  
             txtTramite.Clear();
             txtCodigo.Focus();
+
+            if (lstCola != null)
+            {
+                btnBorrar.Enabled = true;
+            }
+            else
+            {
+                btnBorrar.Enabled = false;
+            }       
+    
+            
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -53,6 +64,55 @@ namespace pryEDSampaolesiI
                 lblNombre.Text = "";
                 lblTramite.Text = "";
             }
+            if (lstCola != null)
+            {
+                btnBorrar.Enabled = true;
+            }
+            else
+            {
+                btnBorrar.Enabled = false;
+            }
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void lstCola_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
