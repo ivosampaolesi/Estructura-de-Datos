@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pryEDSampaolesiI.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -84,6 +85,18 @@ namespace pryEDSampaolesiI
         private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListaDoble x = new frmListaDoble();
+            x.ShowDialog();
+        }
+
+        private void grafoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGrafo x = new frmGrafo();
+            x.ShowDialog();
+        }
+
+        private void arbolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbolBinario x = new frmArbolBinario();
             x.ShowDialog();
         }
     }

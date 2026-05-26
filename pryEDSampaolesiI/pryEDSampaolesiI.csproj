@@ -49,6 +49,7 @@
     <Compile Include="Clases\clsArbolBinario.cs" />
     <Compile Include="Clases\clsArchivoTexto.cs" />
     <Compile Include="Clases\clsCola.cs" />
+    <Compile Include="Clases\clsGrafo.cs" />
     <Compile Include="Clases\clsListaDoble.cs" />
     <Compile Include="Clases\clsListaSimple.cs" />
     <Compile Include="Clases\clsNodo.cs" />
@@ -95,6 +96,12 @@
     <Compile Include="Formularios\frmDatosDesarrollador.Designer.cs">
       <DependentUpon>frmDatosDesarrollador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmGrafo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmGrafo.Designer.cs">
+      <DependentUpon>frmGrafo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,7 +132,7 @@
     <Compile Include="Formularios\frmPila.Designer.cs">
       <DependentUpon>frmPila.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clases\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\frmAlumnos.resx">
       <DependentUpon>frmAlumnos.cs</DependentUpon>
@@ -147,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmDatosDesarrollador.resx">
       <DependentUpon>frmDatosDesarrollador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmGrafo.resx">
+      <DependentUpon>frmGrafo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
@@ -209,6 +219,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ListaDoble.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grafos.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
