@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Clases\clsArbolBinario.cs" />
     <Compile Include="Clases\clsArchivoTexto.cs" />
+    <Compile Include="Clases\clsBaseDatos.cs" />
     <Compile Include="Clases\clsCola.cs" />
     <Compile Include="Clases\clsGrafo.cs" />
     <Compile Include="Clases\clsListaDoble.cs" />
@@ -59,6 +60,12 @@
     </Compile>
     <Compile Include="Formularios\frmAlumnos.Designer.cs">
       <DependentUpon>frmAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmBaseDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmBaseDatos.Designer.cs">
+      <DependentUpon>frmBaseDatos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmArbolBinario.cs">
       <SubType>Form</SubType>
@@ -77,6 +84,18 @@
     </Compile>
     <Compile Include="Formularios\frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmConsultaBaseDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConsultaBaseDatos.Designer.cs">
+      <DependentUpon>frmConsultaBaseDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmConsultaTabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConsultaTabla.Designer.cs">
+      <DependentUpon>frmConsultaTabla.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmCola.cs">
       <SubType>Form</SubType>
@@ -132,10 +151,19 @@
     <Compile Include="Formularios\frmPila.Designer.cs">
       <DependentUpon>frmPila.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmRepasoOperacionesBaseDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRepasoOperacionesBaseDatos.Designer.cs">
+      <DependentUpon>frmRepasoOperacionesBaseDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\frmAlumnos.resx">
       <DependentUpon>frmAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmBaseDatos.resx">
+      <DependentUpon>frmBaseDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmArbolBinario.resx">
       <DependentUpon>frmArbolBinario.cs</DependentUpon>
@@ -145,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConsultaBaseDatos.resx">
+      <DependentUpon>frmConsultaBaseDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConsultaTabla.resx">
+      <DependentUpon>frmConsultaTabla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
@@ -172,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPila.resx">
       <DependentUpon>frmPila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRepasoOperacionesBaseDatos.resx">
+      <DependentUpon>frmRepasoOperacionesBaseDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

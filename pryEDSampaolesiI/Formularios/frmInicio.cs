@@ -99,5 +99,29 @@ namespace pryEDSampaolesiI
             frmArbolBinario x = new frmArbolBinario();
             x.ShowDialog();
         }
+
+        private void consultaDeUnaTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaTabla x = new frmConsultaTabla();
+            x.ShowDialog();
+        }
+
+        private void consultaDeBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaBaseDatos x = new frmConsultaBaseDatos();
+            x.ShowDialog();
+        }
+
+        private void operacionesEnBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatos x = new frmBaseDatos();
+            x.ShowDialog();
+        }
+
+        private void consultasVariasConOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRepasoOperacionesBaseDatos x = new frmRepasoOperacionesBaseDatos();
+            x.ShowDialog();
+        }
     }
 }
