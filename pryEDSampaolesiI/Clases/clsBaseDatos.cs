@@ -14,8 +14,7 @@ namespace pryEDSampaolesiI
         private OleDbDataAdapter adaptador = new OleDbDataAdapter();
 
         private string CadenaConexion1 = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Libreria.mdb";
-        private string CadenaConexion2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Libreria.mdb";
-        //private string varSQL = "Select * from Libro";
+ 
 
         public void Listar(DataGridView Grilla)
         {
