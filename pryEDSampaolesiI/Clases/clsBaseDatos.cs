@@ -70,6 +70,31 @@ namespace pryEDSampaolesiI
             }
         }
 
-        
+        public void Listar(DataGridView Grilla, String varInstruccionSQL)
+        {
+            try
+            {
+                conexion.ConnectionString = CadenaConexion1;
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = varInstruccionSQL;
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataSet DS = new DataSet();
+                adaptador.Fill(DS, "Resultado");
+
+                Grilla.DataSource = null;
+                Grilla.DataSource = DS.Tables["Resultado"];
+
+                conexion.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                conexion.Close();
+            }
+        }
     }
 }

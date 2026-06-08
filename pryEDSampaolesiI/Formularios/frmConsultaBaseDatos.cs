@@ -9,5 +9,11 @@ namespace pryEDSampaolesiI
         {
             InitializeComponent();
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsBaseDatos objBaseDatos = new clsBaseDatos();
+            objBaseDatos.Listar(dgvDatos, txtConsulta.Text);
+        }
     }
 }
