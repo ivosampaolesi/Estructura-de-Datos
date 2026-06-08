@@ -41,7 +41,7 @@ namespace pryEDSampaolesiI
             this.lblTabla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTabla.Location = new System.Drawing.Point(480, 724);
             this.lblTabla.Name = "lblTabla";
-            this.lblTabla.Size = new System.Drawing.Size(228, 20);
+            this.lblTabla.Size = new System.Drawing.Size(232, 20);
             this.lblTabla.TabIndex = 1;
             this.lblTabla.Text = "Tabla de la base de datos:";
             // 
@@ -49,7 +49,10 @@ namespace pryEDSampaolesiI
             // 
             this.cmbTabla.FormattingEnabled = true;
             this.cmbTabla.Items.AddRange(new object[] {
-            "Autor"});
+            "Autor",
+            "Libro ",
+            "Idioma",
+            "Pais"});
             this.cmbTabla.Location = new System.Drawing.Point(724, 721);
             this.cmbTabla.Name = "cmbTabla";
             this.cmbTabla.Size = new System.Drawing.Size(245, 24);
@@ -65,6 +68,7 @@ namespace pryEDSampaolesiI
             this.btnListar.TabIndex = 3;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // frmConsultaTabla
             // 
@@ -78,6 +82,7 @@ namespace pryEDSampaolesiI
             this.Name = "frmConsultaTabla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de una tabla";
+            this.Load += new System.EventHandler(this.frmConsultaTabla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
