@@ -260,5 +260,8 @@
   <ItemGroup>
     <None Include="Resources\grafos.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arbol-binario.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

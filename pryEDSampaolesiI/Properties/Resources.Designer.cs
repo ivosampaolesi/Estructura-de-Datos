@@ -63,6 +63,16 @@ namespace pryEDSampaolesiI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arbol_binario {
+            get {
+                object obj = ResourceManager.GetObject("arbol-binario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cola {
             get {
                 object obj = ResourceManager.GetObject("Cola", resourceCulture);
