@@ -19,7 +19,7 @@ namespace pryEDSampaolesiI
 
         private void btnProyeccionMultiatributo_Click(object sender, EventArgs e)
         {
-            bd.Listar(dgvDatos, "SELECT Titulo, Año FROM Libro");
+            bd.Listar(dgvDatos, "SELECT Titulo, Año, Precio FROM Libro");
         }
 
         private void btnJuntar_Click(object sender, EventArgs e)
@@ -29,32 +29,32 @@ namespace pryEDSampaolesiI
 
         private void btnSeleccionSimple_Click(object sender, EventArgs e)
         {
-            bd.Listar(dgvDatos, "SELECT * FROM Libro WHERE IdAutor = 4");
+            bd.Listar(dgvDatos, "SELECT * FROM Libro WHERE Cantidad < 5");
         }
 
         private void btnSeleccionMultiatributo_Click(object sender, EventArgs e)
         {
-            bd.Listar(dgvDatos, "SELECT * FROM Libro WHERE IdAutor = 3 AND IdIdioma = 3");
+            bd.Listar(dgvDatos, "SELECT * FROM Libro WHERE Precio > 100 AND Cantidad > 7");
         }
 
         private void btnSeleccionPorConvolucion_Click(object sender, EventArgs e)
         {
-            bd.Listar(dgvDatos, "SELECT * FROM Libro WHERE Titulo LIKE '%a%'");
+            bd.Listar(dgvDatos, "SELECT * FROM Libro WHERE Titulo LIKE 'E%'");
         }
 
         private void btnUnion_Click(object sender, EventArgs e)
         {
-            bd.Listar(dgvDatos, "SELECT Nombre FROM Idioma UNION SELECT Nombre FROM Pais");
+            bd.Listar(dgvDatos, "SELECT Titulo FROM Libro WHERE Precio > 700 " + "UNION SELECT Titulo FROM Libro WHERE Cantidad > 5");
         }
 
         private void btnInterseccion_Click(object sender, EventArgs e)
         {
-            bd.Listar(dgvDatos, "SELECT Idioma.Nombre FROM Idioma INNER JOIN Pais ON Idioma.Nombre = Pais.Nombre");
+            bd.Listar(dgvDatos, "SELECT L.Titulo FROM Libro L INNER JOIN Autor A ON L.IdAutor = A.IdAutor WHERE A.Nombre LIKE 'G%'");
         }
 
         private void btnDiferencia_Click(object sender, EventArgs e)
         {
-            bd.Listar(dgvDatos, "SELECT Nombre FROM Idioma WHERE Nombre NOT IN (SELECT Nombre FROM Pais)");
+            bd.Listar(dgvDatos, "SELECT Titulo FROM Libro WHERE IdIdioma = 1 AND IdLibro NOT IN (SELECT IdLibro FROM Libro WHERE IdIdioma = 2)");
         }
 
   
