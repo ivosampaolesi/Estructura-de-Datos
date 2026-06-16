@@ -30,26 +30,31 @@ namespace pryEDSampaolesiI
             this.lblOperacion.AutoSize = true;
             this.lblOperacion.Location = new System.Drawing.Point(17, 84);
             this.lblOperacion.Name = "lblOperacion";
-            this.lblOperacion.Size = new System.Drawing.Size(256, 16);
+            this.lblOperacion.Size = new System.Drawing.Size(253, 16);
             this.lblOperacion.TabIndex = 0;
             this.lblOperacion.Text = "Operación a realizar en la base de datos:";
             // 
             // cmbOperacion
             // 
+            this.cmbOperacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOperacion.FormattingEnabled = true;
+            this.cmbOperacion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cmbOperacion.Location = new System.Drawing.Point(323, 69);
             this.cmbOperacion.Name = "cmbOperacion";
             this.cmbOperacion.Size = new System.Drawing.Size(520, 24);
             this.cmbOperacion.TabIndex = 1;
+            this.cmbOperacion.SelectedIndexChanged += new System.EventHandler(this.cmbOperacion_SelectedIndexChanged);
             // 
             // btnListar
             // 
+            this.btnListar.Enabled = false;
             this.btnListar.Location = new System.Drawing.Point(869, 66);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(142, 29);
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // txtConsulta
             // 
@@ -70,7 +75,7 @@ namespace pryEDSampaolesiI
             this.dgvDatos.Size = new System.Drawing.Size(998, 357);
             this.dgvDatos.TabIndex = 4;
             // 
-            // frmRepasoOperacionesBaseDatos
+            // frmConsultaOperaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,9 +85,10 @@ namespace pryEDSampaolesiI
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.cmbOperacion);
             this.Controls.Add(this.lblOperacion);
-            this.Name = "frmRepasoOperacionesBaseDatos";
+            this.Name = "frmConsultaOperaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repaso de Operaciones de Base de Datos";
+            this.Load += new System.EventHandler(this.frmConsultaOperaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
