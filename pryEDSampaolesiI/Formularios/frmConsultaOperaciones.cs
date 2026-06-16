@@ -45,7 +45,6 @@ namespace pryEDSampaolesiI
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-
             bd.Listar(dgvDatos, txtConsulta.Text);
             btnListar.Enabled = false;
         }

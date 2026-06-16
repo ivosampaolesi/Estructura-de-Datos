@@ -31,6 +31,8 @@ namespace pryEDSampaolesiI.Formularios
             grafo.MostrarCiudades(cmbDestinoConsulta);
             grafo.MostrarCiudades(cmbHasta);
             grafo.MostrarTodo(dgvGrafo);
+            
+            btnCargar.Enabled = false;
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
@@ -42,6 +44,75 @@ namespace pryEDSampaolesiI.Formularios
             grafo.MostrarTodo(dgvGrafo);
             lblListarViajes.Text = "Listado completo de viajes";
             txtPrecioCarga.Text = "";
+            btnCargar.Enabled = false;
+
         }
+
+        private void btnBorrarTodo_Click(object sender, EventArgs e)
+        {
+            grafo.BorrarTodo();
+            grafo.MostrarTodo(dgvGrafo);
+            
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            Int32 origen = cmbOrigenConsulta.SelectedIndex;
+            Int32 destino = cmbDestinoConsulta.SelectedIndex;
+            Decimal precio = grafo.Consultar(destino, origen);
+            if (precio > 0)
+                lblListarViajes.Text = "$ " + precio.ToString();
+            
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            Int32 origen = cmbOrigenConsulta.SelectedIndex;
+            Int32 destino = cmbDestinoConsulta.SelectedIndex;
+            grafo.Eliminar(destino, origen);
+            grafo.MostrarTodo(dgvGrafo);
+            
+        }
+
+        private void btnListarDestinos_Click(object sender, EventArgs e)
+        {
+            grafo.MostrarDestinos(cmbDesde.SelectedIndex, dgvGrafo);
+        }
+
+        private void btnListarOrigenes_Click(object sender, EventArgs e)
+        {
+            grafo.MostrarOrigenes(cmbHasta.SelectedIndex, dgvGrafo);
+        }
+
+        private void btnVerTodo_Click(object sender, EventArgs e)
+        {
+            grafo.MostrarTodo(dgvGrafo);
+        }
+
+        private void txtPrecioCarga_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPrecioCarga.Text != null && cmbOrigenCarga.SelectedItem!=null && cmbDestinoCarga.SelectedItem != null)
+            {
+                btnCargar.Enabled = true;
+            } 
+        }
+
+        private void cmbDestinoCarga_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (txtPrecioCarga.Text != null && cmbOrigenCarga.SelectedItem != null && cmbDestinoCarga.SelectedItem != null)
+            {
+                btnCargar.Enabled = true;
+            }
+        }
+
+        private void cmbOrigenCarga_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (txtPrecioCarga.Text != "" && cmbOrigenCarga.SelectedItem != null && cmbDestinoCarga.SelectedItem != null)
+            {
+                btnCargar.Enabled = true;
+            }
+        }
+
+
     }
 }
