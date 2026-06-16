@@ -86,6 +86,7 @@ namespace pryEDSampaolesiI.Clases
 
         private void InOrdenAsc(DataGridView Dgv, clsNodo R)
         {
+            if (R == null) return;
             if (R.Izquierdo != null) InOrdenAsc(Dgv, R.Izquierdo);
             Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
             if (R.Derecho != null) InOrdenAsc(Dgv, R.Derecho);
@@ -93,6 +94,7 @@ namespace pryEDSampaolesiI.Clases
 
         private void InOrdenAsc(ComboBox Combo, clsNodo R)
         {
+            if (R == null) return;
             if (R.Izquierdo != null) InOrdenAsc(Combo, R.Izquierdo);
             Combo.Items.Add(R.Codigo);
             if (R.Derecho != null) InOrdenAsc(Combo, R.Derecho);
@@ -100,6 +102,7 @@ namespace pryEDSampaolesiI.Clases
 
         private void InOrdenAsc(clsNodo[] Vector, clsNodo R, ref Int32 i)
         {
+            if (R == null) return;
             if (R.Izquierdo != null) InOrdenAsc(Vector, R.Izquierdo, ref i);
             Vector[i] = R;
             i++;

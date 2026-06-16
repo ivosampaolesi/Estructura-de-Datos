@@ -60,10 +60,9 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(885, 43);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(4);
+            this.treeView1.Location = new System.Drawing.Point(664, 35);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(373, 485);
+            this.treeView1.Size = new System.Drawing.Size(281, 395);
             this.treeView1.TabIndex = 0;
             // 
             // groupBox3
@@ -75,11 +74,9 @@
             this.groupBox3.Controls.Add(this.txtNombre);
             this.groupBox3.Controls.Add(this.lblCodigoN);
             this.groupBox3.Controls.Add(this.txtCodigo);
-            this.groupBox3.Location = new System.Drawing.Point(324, 43);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(243, 35);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(235, 229);
+            this.groupBox3.Size = new System.Drawing.Size(176, 186);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Nuevo Elemento";
@@ -87,10 +84,9 @@
             // btnAgregar
             // 
             this.btnAgregar.Enabled = false;
-            this.btnAgregar.Location = new System.Drawing.Point(12, 153);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(9, 124);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(203, 52);
+            this.btnAgregar.Size = new System.Drawing.Size(152, 42);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -99,57 +95,51 @@
             // lblTramiteN
             // 
             this.lblTramiteN.AutoSize = true;
-            this.lblTramiteN.Location = new System.Drawing.Point(8, 124);
-            this.lblTramiteN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTramiteN.Location = new System.Drawing.Point(6, 101);
             this.lblTramiteN.Name = "lblTramiteN";
-            this.lblTramiteN.Size = new System.Drawing.Size(56, 16);
+            this.lblTramiteN.Size = new System.Drawing.Size(45, 13);
             this.lblTramiteN.TabIndex = 5;
             this.lblTramiteN.Text = "Tramite:";
             // 
             // txtTramite
             // 
-            this.txtTramite.Location = new System.Drawing.Point(93, 121);
-            this.txtTramite.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTramite.Location = new System.Drawing.Point(70, 98);
             this.txtTramite.Name = "txtTramite";
-            this.txtTramite.Size = new System.Drawing.Size(132, 22);
+            this.txtTramite.Size = new System.Drawing.Size(100, 20);
             this.txtTramite.TabIndex = 4;
             this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // lblNombreN
             // 
             this.lblNombreN.AutoSize = true;
-            this.lblNombreN.Location = new System.Drawing.Point(8, 84);
-            this.lblNombreN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreN.Location = new System.Drawing.Point(6, 68);
             this.lblNombreN.Name = "lblNombreN";
-            this.lblNombreN.Size = new System.Drawing.Size(59, 16);
+            this.lblNombreN.Size = new System.Drawing.Size(47, 13);
             this.lblNombreN.TabIndex = 3;
             this.lblNombreN.Text = "Nombre:";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(93, 80);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Location = new System.Drawing.Point(70, 65);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(132, 22);
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 2;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblCodigoN
             // 
             this.lblCodigoN.AutoSize = true;
-            this.lblCodigoN.Location = new System.Drawing.Point(8, 44);
-            this.lblCodigoN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigoN.Location = new System.Drawing.Point(6, 36);
             this.lblCodigoN.Name = "lblCodigoN";
-            this.lblCodigoN.Size = new System.Drawing.Size(54, 16);
+            this.lblCodigoN.Size = new System.Drawing.Size(43, 13);
             this.lblCodigoN.TabIndex = 1;
             this.lblCodigoN.Text = "Codigo:";
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(117, 41);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigo.Location = new System.Drawing.Point(88, 33);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(108, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(82, 20);
             this.txtCodigo.TabIndex = 0;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
@@ -158,32 +148,29 @@
             this.groupBox2.Controls.Add(this.cmbLista);
             this.groupBox2.Controls.Add(this.btnBorrar);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(585, 43);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(439, 35);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(235, 127);
+            this.groupBox2.Size = new System.Drawing.Size(176, 103);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Eliminar Elemento";
             // 
             // cmbLista
             // 
+            this.cmbLista.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLista.FormattingEnabled = true;
-            this.cmbLista.Location = new System.Drawing.Point(96, 28);
-            this.cmbLista.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbLista.Location = new System.Drawing.Point(72, 23);
             this.cmbLista.Name = "cmbLista";
-            this.cmbLista.Size = new System.Drawing.Size(108, 24);
+            this.cmbLista.Size = new System.Drawing.Size(82, 21);
             this.cmbLista.TabIndex = 8;
             this.cmbLista.SelectedIndexChanged += new System.EventHandler(this.cmbLista_SelectedIndexChanged);
             // 
             // btnBorrar
             // 
             this.btnBorrar.Enabled = false;
-            this.btnBorrar.Location = new System.Drawing.Point(32, 71);
-            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBorrar.Location = new System.Drawing.Point(24, 58);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(173, 39);
+            this.btnBorrar.Size = new System.Drawing.Size(130, 32);
             this.btnBorrar.TabIndex = 7;
             this.btnBorrar.Text = "Eliminar";
             this.btnBorrar.UseVisualStyleBackColor = true;
@@ -192,20 +179,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 32);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(11, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 16);
+            this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Codigo:";
             // 
             // btnEquilibrar
             // 
             this.btnEquilibrar.Enabled = false;
-            this.btnEquilibrar.Location = new System.Drawing.Point(604, 196);
-            this.btnEquilibrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEquilibrar.Location = new System.Drawing.Point(453, 159);
             this.btnEquilibrar.Name = "btnEquilibrar";
-            this.btnEquilibrar.Size = new System.Drawing.Size(203, 52);
+            this.btnEquilibrar.Size = new System.Drawing.Size(152, 42);
             this.btnEquilibrar.TabIndex = 9;
             this.btnEquilibrar.Text = "Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
@@ -217,11 +202,10 @@
             this.columCodigo,
             this.columnNombre,
             this.columnTramite});
-            this.dgvListaDoble.Location = new System.Drawing.Point(320, 295);
-            this.dgvListaDoble.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvListaDoble.Location = new System.Drawing.Point(240, 240);
             this.dgvListaDoble.Name = "dgvListaDoble";
             this.dgvListaDoble.RowHeadersWidth = 51;
-            this.dgvListaDoble.Size = new System.Drawing.Size(548, 233);
+            this.dgvListaDoble.Size = new System.Drawing.Size(411, 189);
             this.dgvListaDoble.TabIndex = 15;
             // 
             // columCodigo
@@ -250,11 +234,9 @@
             this.groupBox1.Controls.Add(this.optPostOrden);
             this.groupBox1.Controls.Add(this.optPreOrden);
             this.groupBox1.Controls.Add(this.optInOrden);
-            this.groupBox1.Location = new System.Drawing.Point(45, 295);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(34, 240);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(235, 229);
+            this.groupBox1.Size = new System.Drawing.Size(176, 186);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado del arbol";
@@ -262,10 +244,9 @@
             // optPostOrden
             // 
             this.optPostOrden.AutoSize = true;
-            this.optPostOrden.Location = new System.Drawing.Point(39, 167);
-            this.optPostOrden.Margin = new System.Windows.Forms.Padding(4);
+            this.optPostOrden.Location = new System.Drawing.Point(29, 136);
             this.optPostOrden.Name = "optPostOrden";
-            this.optPostOrden.Size = new System.Drawing.Size(96, 20);
+            this.optPostOrden.Size = new System.Drawing.Size(78, 17);
             this.optPostOrden.TabIndex = 2;
             this.optPostOrden.TabStop = true;
             this.optPostOrden.Text = "Post-Orden";
@@ -275,10 +256,9 @@
             // optPreOrden
             // 
             this.optPreOrden.AutoSize = true;
-            this.optPreOrden.Location = new System.Drawing.Point(39, 108);
-            this.optPreOrden.Margin = new System.Windows.Forms.Padding(4);
+            this.optPreOrden.Location = new System.Drawing.Point(29, 88);
             this.optPreOrden.Name = "optPreOrden";
-            this.optPreOrden.Size = new System.Drawing.Size(90, 20);
+            this.optPreOrden.Size = new System.Drawing.Size(73, 17);
             this.optPreOrden.TabIndex = 1;
             this.optPreOrden.TabStop = true;
             this.optPreOrden.Text = "Pre-Orden";
@@ -288,10 +268,9 @@
             // optInOrden
             // 
             this.optInOrden.AutoSize = true;
-            this.optInOrden.Location = new System.Drawing.Point(39, 49);
-            this.optInOrden.Margin = new System.Windows.Forms.Padding(4);
+            this.optInOrden.Location = new System.Drawing.Point(29, 40);
             this.optInOrden.Name = "optInOrden";
-            this.optInOrden.Size = new System.Drawing.Size(79, 20);
+            this.optInOrden.Size = new System.Drawing.Size(66, 17);
             this.optInOrden.TabIndex = 0;
             this.optInOrden.TabStop = true;
             this.optInOrden.Text = "In-Orden";
@@ -301,19 +280,18 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::pryEDSampaolesiI.Properties.Resources.arbol_binario;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 43);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 35);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(259, 213);
+            this.pictureBox1.Size = new System.Drawing.Size(194, 173);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
             // frmArbolBinario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1270, 554);
+            this.ClientSize = new System.Drawing.Size(952, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvListaDoble);
@@ -321,7 +299,6 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.treeView1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmArbolBinario";
             this.Text = "frmArbolBinario";
             this.groupBox3.ResumeLayout(false);
