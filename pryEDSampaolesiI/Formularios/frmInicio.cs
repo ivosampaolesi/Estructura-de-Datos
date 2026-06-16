@@ -114,13 +114,13 @@ namespace pryEDSampaolesiI
 
         private void operacionesEnBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBaseDatos x = new frmBaseDatos();
+            frmOperaciones x = new frmOperaciones();
             x.ShowDialog();
         }
 
         private void consultasVariasConOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRepasoOperacionesBaseDatos x = new frmRepasoOperacionesBaseDatos();
+            frmConsultaOperaciones x = new frmConsultaOperaciones();
             x.ShowDialog();
         }
     }

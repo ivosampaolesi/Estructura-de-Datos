@@ -1,6 +1,6 @@
 namespace pryEDSampaolesiI
 {
-    partial class frmBaseDatos
+    partial class frmOperaciones
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -67,6 +67,7 @@ namespace pryEDSampaolesiI
             this.btnJuntar.TabIndex = 2;
             this.btnJuntar.Text = "Juntar";
             this.btnJuntar.UseVisualStyleBackColor = true;
+            this.btnJuntar.Click += new System.EventHandler(this.btnJuntar_Click);
             // 
             // btnProyeccionMultiatributo
             // 
@@ -76,6 +77,7 @@ namespace pryEDSampaolesiI
             this.btnProyeccionMultiatributo.TabIndex = 1;
             this.btnProyeccionMultiatributo.Text = "Proyección multiatributo";
             this.btnProyeccionMultiatributo.UseVisualStyleBackColor = true;
+            this.btnProyeccionMultiatributo.Click += new System.EventHandler(this.btnProyeccionMultiatributo_Click);
             // 
             // btnProyeccionSimple
             // 
@@ -85,6 +87,7 @@ namespace pryEDSampaolesiI
             this.btnProyeccionSimple.TabIndex = 0;
             this.btnProyeccionSimple.Text = "Proyección simple";
             this.btnProyeccionSimple.UseVisualStyleBackColor = true;
+            this.btnProyeccionSimple.Click += new System.EventHandler(this.btnProyeccionSimple_Click);
             // 
             // groupBox2
             // 
@@ -106,6 +109,7 @@ namespace pryEDSampaolesiI
             this.btnSeleccionPorConvolucion.TabIndex = 2;
             this.btnSeleccionPorConvolucion.Text = "Selección por convolución";
             this.btnSeleccionPorConvolucion.UseVisualStyleBackColor = true;
+            this.btnSeleccionPorConvolucion.Click += new System.EventHandler(this.btnSeleccionPorConvolucion_Click);
             // 
             // btnSeleccionMultiatributo
             // 
@@ -115,6 +119,7 @@ namespace pryEDSampaolesiI
             this.btnSeleccionMultiatributo.TabIndex = 1;
             this.btnSeleccionMultiatributo.Text = "Selección multiatributo";
             this.btnSeleccionMultiatributo.UseVisualStyleBackColor = true;
+            this.btnSeleccionMultiatributo.Click += new System.EventHandler(this.btnSeleccionMultiatributo_Click);
             // 
             // btnSeleccionSimple
             // 
@@ -124,6 +129,7 @@ namespace pryEDSampaolesiI
             this.btnSeleccionSimple.TabIndex = 0;
             this.btnSeleccionSimple.Text = "Selección simple";
             this.btnSeleccionSimple.UseVisualStyleBackColor = true;
+            this.btnSeleccionSimple.Click += new System.EventHandler(this.btnSeleccionSimple_Click);
             // 
             // groupBox3
             // 
@@ -145,6 +151,7 @@ namespace pryEDSampaolesiI
             this.btnDiferencia.TabIndex = 2;
             this.btnDiferencia.Text = "Diferencia";
             this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
             // 
             // btnInterseccion
             // 
@@ -154,6 +161,7 @@ namespace pryEDSampaolesiI
             this.btnInterseccion.TabIndex = 1;
             this.btnInterseccion.Text = "Intersección";
             this.btnInterseccion.UseVisualStyleBackColor = true;
+            this.btnInterseccion.Click += new System.EventHandler(this.btnInterseccion_Click);
             // 
             // btnUnion
             // 
@@ -163,8 +171,9 @@ namespace pryEDSampaolesiI
             this.btnUnion.TabIndex = 0;
             this.btnUnion.Text = "Unión";
             this.btnUnion.UseVisualStyleBackColor = true;
+            this.btnUnion.Click += new System.EventHandler(this.btnUnion_Click);
             // 
-            // frmBaseDatos
+            // frmOperaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,7 +182,7 @@ namespace pryEDSampaolesiI
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvDatos);
-            this.Name = "frmBaseDatos";
+            this.Name = "frmOperaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Base de Datos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();

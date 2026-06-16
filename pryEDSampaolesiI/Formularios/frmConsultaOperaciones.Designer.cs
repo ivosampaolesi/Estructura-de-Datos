@@ -1,6 +1,6 @@
 namespace pryEDSampaolesiI
 {
-    partial class frmRepasoOperacionesBaseDatos
+    partial class frmConsultaOperaciones
     {
         private System.ComponentModel.IContainer components = null;
 

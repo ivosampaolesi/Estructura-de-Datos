@@ -39,7 +39,7 @@ namespace pryEDSampaolesiI
             // 
             this.lblTabla.AutoSize = true;
             this.lblTabla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTabla.Location = new System.Drawing.Point(480, 724);
+            this.lblTabla.Location = new System.Drawing.Point(449, 725);
             this.lblTabla.Name = "lblTabla";
             this.lblTabla.Size = new System.Drawing.Size(232, 20);
             this.lblTabla.TabIndex = 1;

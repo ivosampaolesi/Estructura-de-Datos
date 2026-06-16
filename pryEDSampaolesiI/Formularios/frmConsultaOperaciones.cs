@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace pryEDSampaolesiI
 {
-    public partial class frmBaseDatos : Form
+    public partial class frmConsultaOperaciones : Form
     {
-        public frmBaseDatos()
+        public frmConsultaOperaciones()
         {
             InitializeComponent();
         }
