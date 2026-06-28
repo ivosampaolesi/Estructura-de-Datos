@@ -1,4 +1,4 @@
-﻿namespace pryEDSampaolesiI.Formularios
+namespace pryEDSampaolesiI.Formularios
 {
     partial class frmArbolBinario
     {
@@ -194,6 +194,7 @@
             this.btnEquilibrar.TabIndex = 9;
             this.btnEquilibrar.Text = "Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
+            this.btnEquilibrar.Click += new System.EventHandler(this.btnEquilibrar_Click);
             // 
             // dgvListaDoble
             // 

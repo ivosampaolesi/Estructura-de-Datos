@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,6 +33,8 @@ namespace pryEDSampaolesiI.Formularios
             Arbol.Recorrer(cmbLista);
             Arbol.Recorrer(treeView1);
 
+            btnEquilibrar.Enabled = true;
+
             txtCodigo.Clear();
             txtNombre.Clear();
             txtTramite.Clear();
@@ -47,8 +49,18 @@ namespace pryEDSampaolesiI.Formularios
             Arbol.Recorrer(cmbLista);
             Arbol.Recorrer(treeView1);
 
+            if (Arbol.Raiz == null) btnEquilibrar.Enabled = false;
+
             cmbLista.Focus();
             btnBorrar.Enabled = false;
+        }
+
+        private void btnEquilibrar_Click(object sender, EventArgs e)
+        {
+            Arbol.Equilibrar();
+            Arbol.Recorrer(dgvListaDoble);
+            Arbol.Recorrer(cmbLista);
+            Arbol.Recorrer(treeView1);
         }
 
         private void optInOrden_CheckedChanged(object sender, EventArgs e)

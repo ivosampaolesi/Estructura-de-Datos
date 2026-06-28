@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -171,6 +171,33 @@ namespace pryEDSampaolesiI.Clases
             return R;
         }
 
+        public void Equilibrar()
+        {
+            Int32 cantidad = Contar(Raiz);
+            clsNodo[] Vector = new clsNodo[cantidad];
+            Recorrer(Vector);
+            Raiz = null;
+            Equilibrar(Vector, 0, cantidad - 1);
+        }
 
+        private Int32 Contar(clsNodo R)
+        {
+            if (R == null) return 0;
+            return Contar(R.Izquierdo) + Contar(R.Derecho) + 1;
+        }
+
+        private void Equilibrar(clsNodo[] Vector, Int32 inicio, Int32 fin)
+        {
+            if (inicio <= fin)
+            {
+                Int32 medio = (inicio + fin) / 2;
+                clsNodo nvo = Vector[medio];
+                nvo.Izquierdo = null;
+                nvo.Derecho = null;
+                Agregar(nvo);
+                Equilibrar(Vector, inicio, medio - 1);
+                Equilibrar(Vector, medio + 1, fin);
+            }
+        }
     }
 }
