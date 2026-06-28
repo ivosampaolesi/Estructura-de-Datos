@@ -111,6 +111,7 @@ namespace pryEDSampaolesiI.Clases
 
         private void PreOrden(DataGridView Dgv, clsNodo R)
         {
+            if (R == null) return;
             Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
             if (R.Izquierdo != null) PreOrden(Dgv, R.Izquierdo);
             if (R.Derecho != null) PreOrden(Dgv, R.Derecho);
@@ -118,6 +119,7 @@ namespace pryEDSampaolesiI.Clases
 
         private void PostOrden(DataGridView Dgv, clsNodo R)
         {
+            if (R == null) return;
             if (R.Izquierdo != null) PostOrden(Dgv, R.Izquierdo);
             if (R.Derecho != null) PostOrden(Dgv, R.Derecho);
             Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
